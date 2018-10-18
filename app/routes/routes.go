@@ -6,18 +6,45 @@ package routes
 import "github.com/revel/revel"
 
 
-type tApp struct {}
-var App tApp
+type tApplication struct {}
+var Application tApplication
 
 
-func (_ tApp) Index(
+func (_ tApplication) Index(
 		) string {
 	args := make(map[string]string)
 	
-	return revel.MainRouter.Reverse("App.Index", args).URL
+	return revel.MainRouter.Reverse("Application.Index", args).URL
 }
 
-func (_ tApp) Hello(
+func (_ tApplication) Register(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Application.Register", args).URL
+}
+
+func (_ tApplication) Login(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Application.Login", args).URL
+}
+
+func (_ tApplication) PostLogin(
+		email string,
+		password string,
+		remember bool,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "email", email)
+	revel.Unbind(args, "password", password)
+	revel.Unbind(args, "remember", remember)
+	return revel.MainRouter.Reverse("Application.PostLogin", args).URL
+}
+
+func (_ tApplication) Hello(
 		username string,
 		password string,
 		) string {
@@ -25,7 +52,7 @@ func (_ tApp) Hello(
 	
 	revel.Unbind(args, "username", username)
 	revel.Unbind(args, "password", password)
-	return revel.MainRouter.Reverse("App.Hello", args).URL
+	return revel.MainRouter.Reverse("Application.Hello", args).URL
 }
 
 

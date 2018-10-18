@@ -7,9 +7,9 @@ module:testrunner
 # module:jobs
 
 
-GET     /                                      App.Index
-GET		/App/Hello 								App.Hello
-
+GET     /                                       Application.Index
+GET     /login                                  Application.Login
+POST    /login 									Application.PostLogin
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

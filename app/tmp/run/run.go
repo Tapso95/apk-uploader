@@ -31,15 +31,43 @@ func Run(port int) {
 func Register() {
 	revel.AppLog.Info("Running revel server")
 	
-	revel.RegisterController((*controllers.App)(nil),
+	revel.RegisterController((*controllers.Application)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
 				Name: "Index",
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					12: []string{ 
+					16: []string{ 
 					},
+				},
+			},
+			&revel.MethodType{
+				Name: "Register",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					20: []string{ 
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "Login",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					23: []string{ 
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "PostLogin",
+				Args: []*revel.MethodArg{ 
+					&revel.MethodArg{Name: "email", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "password", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "remember", Type: reflect.TypeOf((*bool)(nil)) },
+				},
+				RenderArgNames: map[int][]string{ 
 				},
 			},
 			&revel.MethodType{
@@ -49,7 +77,7 @@ func Register() {
 					&revel.MethodArg{Name: "password", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
-					23: []string{ 
+					80: []string{ 
 						"username",
 					},
 				},
@@ -142,10 +170,18 @@ func Register() {
 		})
 	
 	revel.DefaultValidationKeys = map[string]map[int]string{ 
-		"apk-uploader/app/controllers.App.Hello": { 
-			16: "username",
-			17: "password",
-			18: "password",
+		"apk-uploader/app/controllers.Application.Hello": { 
+			73: "username",
+			74: "password",
+			75: "password",
+		},
+		"apk-uploader/app/models.(*Utilisateur).Validate": { 
+			29: "utilisateur.NomUtilisateur",
+			37: "utilisateur.PrenomUtilisateur",
+			41: "utilisateur.EmailUtilisateur",
+		},
+		"apk-uploader/app/models.ValidatePassword": { 
+			49: "password",
 		},
 	}
 	testing.TestSuites = []interface{}{ 

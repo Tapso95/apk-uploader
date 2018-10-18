@@ -1,10 +1,11 @@
+@import "costum.css";
 body {
     font-family: Arial;
     color: #999;
     font-size: 14px;
     text-decoration: none;
-    background-color: whitesmoke;
-    /*background-color: #BCBCBC;*/
+    /*background-color: ;*/
+    background-color: #BCBCBC;
 }
 .input-group-addon, .input-group-lg{
 	border-radius: 0;
@@ -14,34 +15,40 @@ body {
 a:link{
 	text-decoration: none;
 }
+a:hover{
+	color: #0091ea;
+}
 input:focus{
 	color: #999;
 }
 .input-group-lg > .input-group-addon{
 	border-radius: 0;
-	background-color: #078FC9;
+	background-color: #0091ea;
 	color: white;
 }
-.form-control::-moz-placeholder{
+.form-control-login::-moz-placeholder{
 	background-color:#E6E6E6;
 	color: #078FC9;
+	opacity:1
 }
+
+
 .form-control{
 	border: 0;
 	border-radius: 0; 
 }
 .btn-primary,.btn-primary:hover,.btn-primary:focus{
-	background-color: #078FC9;
+	background-color: #0091ea;
 	border-radius: 0;
 	border-color: none; 
 }
 .btn-primary > button:hover{
-	background-color: #078FC9;
+	background-color: #0091ea;
 }
 
 /*Formulaire de connexion*/
 .login-header{
-	background-color: #078FC9;
+	background-color: #0091ea;
 	color: #fff;
 }
 .login-body{
@@ -58,8 +65,14 @@ input:focus{
 .dashboard-label{
 	font-size: 24px;
 }
+.login-icon{
+	font-size: 30px;
+	padding: 2px 15px;
+}
 .col-md-2{
 	/*width: 12.5%;*/
+	min-width: 168.33333px;
+	width: 168.33333px;
 	padding-right: 5px;
 	padding-left: 5px;
 }
@@ -68,7 +81,7 @@ input:focus{
 .cadre-app {
     border-radius: 3px;
     display: inline-block;
-    height: 160px;
+    height: 175px;
     position: relative;
     width: 100%;
     background-color: white;
@@ -102,7 +115,6 @@ input:focus{
     font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
-
     height: 50%;
     padding-bottom: 4px;
     text-overflow: ellipsis;
@@ -117,4 +129,17 @@ input:focus{
     padding: 0 0 4px;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.search-aria{
+	width: 50%;
+}
+.header-menu{
+	background-color: white;
+	color: #424242;
+	height: 40px;
+	width: 100%;
+	padding-bottom: 40px;
+}
+.nav-item{
+	color: white;
 }

@@ -31,6 +31,17 @@ func (_ tApplication) Login(
 	return revel.MainRouter.Reverse("Application.Login", args).URL
 }
 
+func (_ tApplication) SaveUser(
+		utilisateur interface{},
+		password interface{},
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "utilisateur", utilisateur)
+	revel.Unbind(args, "password", password)
+	return revel.MainRouter.Reverse("Application.SaveUser", args).URL
+}
+
 func (_ tApplication) PostLogin(
 		email string,
 		password string,

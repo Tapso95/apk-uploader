@@ -1,7 +1,7 @@
 @import "costum.css";
 body {
     font-family: Arial;
-    color: #999;
+    /*color: #999;*/
     font-size: 14px;
     text-decoration: none;
     /*background-color: ;*/
@@ -21,6 +21,9 @@ a:hover{
 input:focus{
 	color: #999;
 }
+/*label{
+	color: #0091ea;
+}*/
 .input-group-lg > .input-group-addon{
 	border-radius: 0;
 	background-color: #0091ea;
@@ -31,7 +34,6 @@ input:focus{
 	color: #078FC9;
 	opacity:1
 }
-
 
 .form-control{
 	border: 0;

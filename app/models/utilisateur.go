@@ -1,7 +1,8 @@
 package models
 import (
-	"fmt"
 	"github.com/revel/revel"
+	_ "github.com/go-sql-driver/mysql"
+	"fmt"
 	"regexp"
 )
 
@@ -18,6 +19,11 @@ type Utilisateur struct {
 func (u *Utilisateur) String() string {
 	return fmt.Sprintf("Utilisateur(%s %s)", u.NomUtilisateur,u.PrenomUtilisateur)
 }
+type Password struct {
+	Pass        string
+	PassConfirm string
+}
+
 var utilisateurRegex = regexp.MustCompile("^\\w*$")
 
 func (utilisateur *Utilisateur) Validate(v *revel.Validation) {
@@ -27,24 +33,22 @@ func (utilisateur *Utilisateur) Validate(v *revel.Validation) {
 		revel.MinSize{2},
 		revel.Match{utilisateurRegex},
 	)
-
-	ValidatePassword(v, utilisateur.PasswordUtilisateur).
-		Key("utilisateur.PasswordUtilisateur")
-
 	v.Check(utilisateur.PrenomUtilisateur,
 		revel.Required{},
 		revel.MaxSize{50},
 	)
 	v.Check(utilisateur.EmailUtilisateur,
 		revel.Required{},
-		revel.MaxSize{60},
 	)
+	v.Email(utilisateur.EmailUtilisateur)
 }
 
-func ValidatePassword(v *revel.Validation, password []byte) *revel.ValidationResult {
-	return v.Check(password,
-		revel.Required{},
-		revel.MaxSize{25},
-		revel.MinSize{6},
+func (utilisateur *Utilisateur) ValidatePassword(v *revel.Validation, password Password){
+	v.Check(password.Pass,
+		revel.MinSize{8},
 	)
+	v.Check(password.PassConfirm,
+		revel.MinSize{8},
+	)
+	v.Required(password.Pass == password.PassConfirm).Message("Les mot de passe sont différents.")
 }

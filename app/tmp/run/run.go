@@ -9,6 +9,7 @@ import (
 	"github.com/revel/revel"
 	_ "apk-uploader/app"
 	controllers "apk-uploader/app/controllers"
+	models "apk-uploader/app/models"
 	tests "apk-uploader/tests"
 	controllers0 "github.com/revel/modules/static/app/controllers"
 	_ "github.com/revel/modules/testrunner/app"
@@ -47,7 +48,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					20: []string{ 
+					29: []string{ 
 					},
 				},
 			},
@@ -56,8 +57,17 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					23: []string{ 
+					32: []string{ 
 					},
+				},
+			},
+			&revel.MethodType{
+				Name: "SaveUser",
+				Args: []*revel.MethodArg{ 
+					&revel.MethodArg{Name: "utilisateur", Type: reflect.TypeOf((**models.Utilisateur)(nil)) },
+					&revel.MethodArg{Name: "password", Type: reflect.TypeOf((*models.Password)(nil)) },
+				},
+				RenderArgNames: map[int][]string{ 
 				},
 			},
 			&revel.MethodType{
@@ -77,7 +87,7 @@ func Register() {
 					&revel.MethodArg{Name: "password", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
-					80: []string{ 
+					124: []string{ 
 						"username",
 					},
 				},
@@ -171,17 +181,23 @@ func Register() {
 	
 	revel.DefaultValidationKeys = map[string]map[int]string{ 
 		"apk-uploader/app/controllers.Application.Hello": { 
-			73: "username",
-			74: "password",
-			75: "password",
+			117: "username",
+			118: "password",
+			119: "password",
+		},
+		"apk-uploader/app/controllers.Application.SaveUser": { 
+			54: "utilisateur.EmailUtilisateur",
 		},
 		"apk-uploader/app/models.(*Utilisateur).Validate": { 
-			29: "utilisateur.NomUtilisateur",
-			37: "utilisateur.PrenomUtilisateur",
-			41: "utilisateur.EmailUtilisateur",
+			35: "utilisateur.NomUtilisateur",
+			39: "utilisateur.PrenomUtilisateur",
+			42: "utilisateur.EmailUtilisateur",
+			43: "utilisateur.EmailUtilisateur",
 		},
-		"apk-uploader/app/models.ValidatePassword": { 
-			49: "password",
+		"apk-uploader/app/models.(*Utilisateur).ValidatePassword": { 
+			49: "password.Pass",
+			52: "password.PassConfirm",
+			53: "password.Pass",
 		},
 	}
 	testing.TestSuites = []interface{}{ 

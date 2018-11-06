@@ -17,6 +17,15 @@ func (_ tApplication) Index(
 	return revel.MainRouter.Reverse("Application.Index", args).URL
 }
 
+func (_ tApplication) Hello(
+		username string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "username", username)
+	return revel.MainRouter.Reverse("Application.Hello", args).URL
+}
+
 func (_ tApplication) Register(
 		) string {
 	args := make(map[string]string)
@@ -29,6 +38,13 @@ func (_ tApplication) Login(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("Application.Login", args).URL
+}
+
+func (_ tApplication) Logout(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Application.Logout", args).URL
 }
 
 func (_ tApplication) SaveUser(
@@ -53,17 +69,6 @@ func (_ tApplication) PostLogin(
 	revel.Unbind(args, "password", password)
 	revel.Unbind(args, "remember", remember)
 	return revel.MainRouter.Reverse("Application.PostLogin", args).URL
-}
-
-func (_ tApplication) Hello(
-		username string,
-		password string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "username", username)
-	revel.Unbind(args, "password", password)
-	return revel.MainRouter.Reverse("Application.Hello", args).URL
 }
 
 

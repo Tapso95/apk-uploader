@@ -17,11 +17,24 @@
         <a class="nav-item" href="{{url "Application.Index"}}" >Accueil<span class="sr-only">(current)</span></a>
         <a class="nav-item" href="#">Categorie</a>
         <a class="nav-item" href="#">A propos</a>
+        {{if .user}}
+          <a href="{{url "Application.Logout"}}" class="btn btn-light">Deconnexion</a>
+        {{else}}
         <a href="{{url "Application.Register"}}" class="btn btn-light">Inscription</a>
         <a href="{{url "Application.Login"}}" class="btn btn-light">Connexion</a>
+        {{end}}
       </div>
     </nav>
   </header>
+
+  <div class="container">
+    <div class="row">
+    <div class="span6">
+        {{template "flash.html" .}}
+    </div>
+    </div>
+</div>
+
   <div class="contents">
           <div class="lavish-row">
             <div id="side-nav-container" class="col-md-3">

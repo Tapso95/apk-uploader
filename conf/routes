@@ -9,9 +9,11 @@ module:testrunner
 
 GET     /                                       Application.Index
 GET     /login                                  Application.Login
+GET		/logout									Application.Logout
 POST    /login 									Application.PostLogin
 GET     /register								Application.Register
 POST 	/register 								Application.SaveUser
+GET     /App/Hello     							Application.Hello
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

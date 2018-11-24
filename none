@@ -1,0 +1,380 @@
+INFO  2018/11/11 20:21:19        command_config.go:136: Returned import path                    path=apk-uploader buildpath=/home/tapsoba/go 
+INFO  2018/11/11 20:21:19           run.go:122: Running apk-uploader (apk-uploader) in dev mode
+
+INFO  2018/11/11 20:21:19           run.go:127: Running in watched mode.                
+INFO  2018/11/11 20:21:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:19        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 20:21:19        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 20:21:19         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 20:21:19         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 20:21:19        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 20:21:19        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 20:21:20        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 20:21:20        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 20:21:20        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 20:21:20        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 20:21:20        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 20:21:20        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 20:21:20         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 20:21:20         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 20:21:20         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 20:21:20         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 20:21:21         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc -X apk-uploader/app.BuildTime=2018-11-11T20:21:21Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 20:21:32         build.go:199: Build successful continuing             
+INFO  2018/11/11 20:21:32            app.go:66: Exec app:                               path=/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader args="[/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader -port=33017 -importPath=apk-uploader -runMode={\"mode\":\"dev\", \"specialUseFlag\":false}]" 
+INFO  2018/11/11 20:21:33        watcher.go:277: Rebuilt, result                         error=nil 
+INFO  2018/11/11 20:21:33        harness.go:276: Proxy server is listening on :9000      
+INFO  2018/11/11 20:21:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:21:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:22:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:22:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:22:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:22:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:25:52        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:25:52        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:28:25        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:28:25        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:28:44        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:28:44        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 20:28:45        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:38        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:38        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:38        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:38        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:38        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:52        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:52        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:28:52        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:03        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:03        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:03        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:03        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:04        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:06        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:06        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:33        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:31:33        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:34:28        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 21:34:28        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 21:34:28        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 21:34:28            app.go:99: Killing revel server pid                pid=19279 
+INFO  2018/11/11 21:34:28        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 21:34:28         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 21:34:28         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 21:34:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 21:34:28         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 21:34:28         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 21:34:28         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 21:34:28         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 21:34:28         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-11T21:34:28Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 21:34:28         build.go:208: Build failed checking for missing importsmessage="# apk-uploader/app/controllers\napp/controllers/app.go:17:29: user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)\n" missing_imports=0 
+INFO  2018/11/11 21:34:28         build.go:210: Build failed no missing imports         message="# apk-uploader/app/controllers\napp/controllers/app.go:17:29: user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)\n" 
+INFO  2018/11/11 21:34:28        watcher.go:272: Watcher: Recording error last build, setting rebuild onerror="Go Compilation Error (in app/controllers/app.go:17): user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)" 
+INFO  2018/11/11 21:34:28        watcher.go:277: Rebuilt, result                         error="Go Compilation Error (in app/controllers/app.go:17): user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)" 
+INFO  2018/11/11 21:34:32        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:34:32        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 21:34:32        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 21:34:32         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 21:34:32         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 21:34:32        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 21:34:32         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 21:34:32         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 21:34:32         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 21:34:32         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 21:34:32         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-11T21:34:32Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 21:34:33         build.go:208: Build failed checking for missing importsmessage="# apk-uploader/app/controllers\napp/controllers/app.go:17:29: user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)\n" missing_imports=0 
+INFO  2018/11/11 21:34:33         build.go:210: Build failed no missing imports         message="# apk-uploader/app/controllers\napp/controllers/app.go:17:29: user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)\n" 
+INFO  2018/11/11 21:34:33        watcher.go:272: Watcher: Recording error last build, setting rebuild onerror="Go Compilation Error (in app/controllers/app.go:17): user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)" 
+INFO  2018/11/11 21:34:33        watcher.go:277: Rebuilt, result                         error="Go Compilation Error (in app/controllers/app.go:17): user.nom_utilisateur undefined (type *models.Utilisateur has no field or method nom_utilisateur)" 
+INFO  2018/11/11 21:35:05        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 21:35:05        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 21:35:05        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 21:35:05        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 21:35:05         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 21:35:05         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 21:35:05        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 21:35:05         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 21:35:05         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 21:35:05         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 21:35:05         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 21:35:05         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-11T21:35:05Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 21:35:07         build.go:199: Build successful continuing             
+INFO  2018/11/11 21:35:07            app.go:66: Exec app:                               path=/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader args="[/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader -port=33017 -importPath=apk-uploader -runMode={\"mode\":\"dev\", \"specialUseFlag\":false}]" 
+INFO  2018/11/11 21:35:07        watcher.go:277: Rebuilt, result                         error=nil 
+INFO  2018/11/11 21:35:08        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:35:09        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:35:17        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:35:17        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:35:17        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:16        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:16        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:20        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:20        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:20        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:20        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:23        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:23        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:36:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:43:35        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:43:35        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:44:55        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:44:56        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:44:58        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:44:59        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:45:36        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:45:36        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:46:14        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:46:15        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:47:05        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:47:05        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:55:51        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:55:51        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:55:51        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:55:51        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:55:51        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 21:57:31        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:03:29        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:03:30        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:03:30        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:03:30        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:03:33        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:03:33        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:06:33        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:06:34        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:07:08        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:07:08        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:07:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:07:12        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:15:30        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:15:37        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:16:44        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:16:45        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:14        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:24:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:30        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:32        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:32        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:45        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:45        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:49        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:49        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:25:49        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:27:31        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 22:27:31        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 22:27:31        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 22:27:31            app.go:99: Killing revel server pid                pid=20613 
+INFO  2018/11/11 22:27:31        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 22:27:31         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 22:27:31         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 22:27:31        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 22:27:31         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 22:27:31         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 22:27:31         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 22:27:31         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 22:27:31         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-11T22:27:31Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 22:27:32         build.go:208: Build failed checking for missing importsmessage="# apk-uploader/app/controllers\napp/controllers/app.go:17:2: non-bool user (type *models.Utilisateur) used as if condition\n" missing_imports=0 
+INFO  2018/11/11 22:27:32         build.go:210: Build failed no missing imports         message="# apk-uploader/app/controllers\napp/controllers/app.go:17:2: non-bool user (type *models.Utilisateur) used as if condition\n" 
+INFO  2018/11/11 22:27:32        watcher.go:272: Watcher: Recording error last build, setting rebuild onerror="Go Compilation Error (in app/controllers/app.go:17): non-bool user (type *models.Utilisateur) used as if condition" 
+INFO  2018/11/11 22:27:32        watcher.go:277: Rebuilt, result                         error="Go Compilation Error (in app/controllers/app.go:17): non-bool user (type *models.Utilisateur) used as if condition" 
+INFO  2018/11/11 22:27:35        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:27:35        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 22:27:35        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 22:27:35         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 22:27:35         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 22:27:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 22:27:35         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 22:27:35         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 22:27:35         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 22:27:35         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 22:27:35         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-11T22:27:35Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 22:27:35         build.go:208: Build failed checking for missing importsmessage="# apk-uploader/app/controllers\napp/controllers/app.go:17:2: non-bool user (type *models.Utilisateur) used as if condition\n" missing_imports=0 
+INFO  2018/11/11 22:27:35         build.go:210: Build failed no missing imports         message="# apk-uploader/app/controllers\napp/controllers/app.go:17:2: non-bool user (type *models.Utilisateur) used as if condition\n" 
+INFO  2018/11/11 22:27:35        watcher.go:272: Watcher: Recording error last build, setting rebuild onerror="Go Compilation Error (in app/controllers/app.go:17): non-bool user (type *models.Utilisateur) used as if condition" 
+INFO  2018/11/11 22:27:35        watcher.go:277: Rebuilt, result                         error="Go Compilation Error (in app/controllers/app.go:17): non-bool user (type *models.Utilisateur) used as if condition" 
+INFO  2018/11/11 22:28:15        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/11 22:28:15        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 22:28:15        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/11 22:28:15        harness.go:221: Rebuild Called                          
+INFO  2018/11/11 22:28:15         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 22:28:15         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/11 22:28:15        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/11 22:28:15         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/11 22:28:15         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/11 22:28:15         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/11 22:28:15         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/11 22:28:15         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-11T22:28:15Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/11 22:28:17         build.go:199: Build successful continuing             
+INFO  2018/11/11 22:28:17            app.go:66: Exec app:                               path=/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader args="[/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader -port=33017 -importPath=apk-uploader -runMode={\"mode\":\"dev\", \"specialUseFlag\":false}]" 
+INFO  2018/11/11 22:28:17        watcher.go:277: Rebuilt, result                         error=nil 
+INFO  2018/11/11 22:28:18        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:19        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:21        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:21        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:28        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:28        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:29        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:31        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:31        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:31        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:39        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:40        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:54        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:28:54        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:29:25        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:29:25        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:34:32        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:34:32        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:34:35        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/11 22:34:35        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:10:50        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:10:50        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:10:50        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:10:50        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:10:50        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:10:50        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:13:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:17:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:17:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:17:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:17:12        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:19:21        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:19:21        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:19:22        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:06        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:07        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:11        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:12        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:23        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:24        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:34:24        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:45:58        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:45:59        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:45:59        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:47:20        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:47:20        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:47:21        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:49:53        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:49:53        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 21:49:54        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:01:52        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:01:53        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:01:53        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:01:55        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:01:55        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:01:56        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:02:03        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:02:04        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:02:04        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:02:04        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:02:05        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:02:05        watcher.go:208: Watcher:Notify refresh state            Current Index=0  last error index=-1 
+INFO  2018/11/12 22:55:34        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/12 22:55:34        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/12 22:55:34        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/12 22:55:34            app.go:99: Killing revel server pid                pid=21641 
+INFO  2018/11/12 22:55:34        harness.go:221: Rebuild Called                          
+INFO  2018/11/12 22:55:34         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/12 22:55:34         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/12 22:55:34        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/12 22:55:34        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/controllers 
+INFO  2018/11/12 22:55:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app/models 
+INFO  2018/11/12 22:55:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/12 22:55:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/12 22:55:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/12 22:55:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/12 22:55:35        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/12 22:55:35         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/12 22:55:35         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/12 22:55:36         build.go:116: No vendor folder detected, not using dependency manager to import files
+INFO  2018/11/12 22:55:36         build.go:280: Exec:                                   args="[/usr/bin/git --git-dir=/home/tapsoba/go/src/apk-uploader/.git --work-tree=/home/tapsoba/go/src/apk-uploader describe --always --dirty]" 
+INFO  2018/11/12 22:55:36         build.go:194: Exec:                                   args="[/usr/bin/go build -i -ldflags -X apk-uploader/app.AppVersion=git-c2fe8bc-dirty -X apk-uploader/app.BuildTime=2018-11-12T22:55:36Z -tags  -o /home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader apk-uploader/app/tmp]" 
+INFO  2018/11/12 22:55:49         build.go:199: Build successful continuing             
+INFO  2018/11/12 22:55:49            app.go:66: Exec app:                               path=/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader args="[/home/tapsoba/go/bin/revel.d/apk-uploader/apk-uploader -port=33017 -importPath=apk-uploader -runMode={\"mode\":\"dev\", \"specialUseFlag\":false}]" 
+INFO  2018/11/12 22:55:49        watcher.go:277: Rebuilt, result                         error=nil 
+INFO  2018/11/12 22:57:28        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/12 22:57:28            app.go:99: Killing revel server pid                pid=15209 
+INFO  2018/11/12 22:57:28        harness.go:221: Rebuild Called                          
+INFO  2018/11/12 22:57:28         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/12 22:57:28         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/12 22:57:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/12 22:57:28        reflect.go:265: Debug: Could not find import:           path=apk-uploader/app/controllers 
+INFO  2018/11/12 22:57:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/controllers 
+INFO  2018/11/12 22:57:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/static/app/model 
+INFO  2018/11/12 22:57:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app 
+INFO  2018/11/12 22:57:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/github.com/revel/modules/testrunner/app/controllers 
+INFO  2018/11/12 22:57:28        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/tests 
+INFO  2018/11/12 22:57:28        watcher.go:272: Watcher: Recording error last build, setting rebuild onerror="Go Compilation Error (in /home/tapsoba/go/src/apk-uploader/app/controllers/user.go:1): expected 'package', found 'EOF'" 
+INFO  2018/11/12 22:57:28        watcher.go:277: Rebuilt, result                         error="Go Compilation Error (in /home/tapsoba/go/src/apk-uploader/app/controllers/user.go:1): expected 'package', found 'EOF'" 
+INFO  2018/11/12 23:27:41        watcher.go:256: Waiting for refresh timer to expire     
+INFO  2018/11/12 23:27:41        watcher.go:242: Found existing timer running, resetting 
+INFO  2018/11/12 23:27:41        harness.go:221: Rebuild Called                          
+INFO  2018/11/12 23:27:41         build.go:301: Cleaning dir                            dir=tmp 
+INFO  2018/11/12 23:27:41         build.go:301: Cleaning dir                            dir=routes 
+INFO  2018/11/12 23:27:41        reflect.go:169: Exaimining files in path                package=/home/tapsoba/go/src/apk-uploader/app 
+INFO  2018/11/12 23:27:41        reflect.go:265: Debug: Could not find import:           path=apk-uploader/app/controllers 

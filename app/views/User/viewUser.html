@@ -1,0 +1,115 @@
+<!-- <div  class="" id="loginPopover">
+  <div class="" style="margin: 10% 22%;">
+      <div class="login-header">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="login-header-txt" >
+            Inscription
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login-body" >
+        <div class="row">
+          <div class="col-lg-12">
+            <form action="{{url "User.SaveUser"}}" method="POST">
+
+              <div class="form-group">
+                <label for="inputExample" class="font-weight-bold">Nom</label>
+                  <input type="text" name="utilisateur.NomUtilisateur" class="form-control form-control-lg form-control-login" placeholder="Entrer votre nom" required>
+              </div> 
+              <div class="form-group">
+                <label for="inputExample" class="font-weight-bold">Prenom</label>
+                  <input type="text" name="utilisateur.PrenomUtilisateur" class="form-control form-control-lg form-control-login" placeholder="Entrer votre prenom" required>
+              </div>
+              <div class="form-group">
+                <label for="inputExample" class="font-weight-bold">Email</label>
+                  <input type="email" name="utilisateur.EmailUtilisateur" class="form-control form-control-lg form-control-login" placeholder="Entrer votre adresse email" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4" class="font-weight-bold">Mot de passe</label>
+                  <input type="password" name="password.Pass" class="form-control form-control-lg form-control-login"  placeholder="Mot de passe">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4" class="font-weight-bold">Confirmation du mot de passe</label>
+                  <input type="password" name="password.PassConfirm" class="form-control form-control-lg form-control-login" placeholder="Confirmation du mot de passe">
+                </div>
+              </div>
+              <div class="form-group">
+              </div> 
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <button type="submit"  class="btn btn-primary btn-lg btn-block" >Créer mon compte</button>
+                </div> 
+                <div class="form-group col-md-6">
+                <a class="btn btn-primary btn-lg btn-block" style="color: white;">Annuler</a>
+              </div> 
+              <a href="{{url "Application.Login"}}">Déjà inscrit</a> 
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> -->
+{{set . "title" "Mes details"}}
+{{template "Templates/header-menu.html" .}}
+
+    <!-- <div class="login-header">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="login-header-txt" >
+           Bienvenue {{.user.NomUtilisateur}} {{.user.PrenomUtilisateur}}
+          </div>
+        </div>
+      </div>
+    </div>  -->
+    <div class="alert alert-info">
+      Récapitulatif de vos détails
+    </div>
+    <div class="alert" style="background-color: white;">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><div >Nom complet</div></td>
+            <td>{{.user.NomUtilisateur}} {{.user.PrenomUtilisateur}}</td>
+          </tr>
+          <tr>
+            <td><div >E-mail</div></td>
+            <td>{{.user.EmailUtilisateur}}</td>
+          </tr>
+          <tr>
+            <td><div >Type de compte</div></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="float-right">
+      <a class="btn btn-primary" href="#">Modifier</a>
+    </div>
+  </div>
+    
+<!--Modal d'affichage des détails de l'application -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailModalLabel">Détail de l'application</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="">
+        <p>Text will be dislay here !</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{template "Templates/footer-menu.html" .}}

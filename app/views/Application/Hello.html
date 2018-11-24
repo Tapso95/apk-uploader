@@ -1,0 +1,14 @@
+{{set . "title" "hello page"}}
+{{template "header.html" .}}
+<div class="alert alert-success">
+	<h3>hello {{.username}}</h3>
+	<a href="/"> retourner a la page d'accueil</a>
+</div>
+{{template "footer.html" .}}
+<!-- 
+          <form action="/App/Hello" method="GET">
+              {{with $field := field "myName" .}}
+                  <input type="text" name="{{$field.Name}}" value="{{$field.Flash}}"/><br/>
+              {{end}}
+              <input type="submit" value="Say hello!" />
+          </form> -->

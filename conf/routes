@@ -1,6 +1,6 @@
 # Routes Config
 #
-# This file defines all application routes (Higher priority routes first)
+# This file defines all App routes (Higher priority routes first)
 #
 
 module:testrunner
@@ -11,9 +11,12 @@ GET     /                                       Application.Index
 GET     /login                                  Application.Login
 GET		/logout									Application.Logout
 POST    /login 									Application.PostLogin
-GET     /register								Application.Register
-POST 	/register 								Application.SaveUser
-GET     /App/Hello     							Application.Hello
+GET     /register								User.Register
+POST 	/register 								User.SaveUser
+GET		/user/:id 								User.ViewUser
+#POST 	/user/:id 								User.SaveSettings
+GET		/application 							Application.ApplicationList
+GET     /Application/Hello     							Application.Hello
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

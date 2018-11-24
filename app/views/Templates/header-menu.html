@@ -4,35 +4,55 @@
       <div class="navbar-brand">
         <i id="sidebar-toggle-button" class="fa fa-bars" aria-hidden="true" style="display: none;"></i>
         <img src="" style="vertical-align: middle;" height="40" width="40" altn="Apk-uploader logo">&nbsp;
-        <span class="site-title d-sm-none" href="/">Apk-uploader</span>
-      </div>
-      <div class="search-aria">
-        <form >
-          <div class="col-md-12">
-            <input class="form-control" type="text" placeholder="Chercher une application">
-          </div>
-        </form>
+        <span class="site-title d-inline d-sm-none d-md-none" href="/">Apk-uploader</span>
       </div>
       <div class="site-nav-horizontal">
-        <a class="nav-item" href="{{url "Application.Index"}}" >Accueil<span class="sr-only">(current)</span></a>
+        <form style="display: inline;"  class="nav-item form-inline">
+            <input class="form-control" type="text" placeholder="Chercher une application">
+         </form>
+        <a class="nav-item" href="{{url "Application.Index"}}" >Accueil</a>
         <a class="nav-item" href="#">Categorie</a>
         <a class="nav-item" href="#">A propos</a>
         {{if .user}}
-          <a href="{{url "Application.Logout"}}" class="btn btn-light">Deconnexion</a>
+        <a class="dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+          <a class="dropdown-item" href="{{url "User.ViewUser" .user.IdUtilisateur}}" >{{if .user.ImageUtilisateur}} <img src="{{.user.ImageUtilisateur}}" height="20" width="20" style="border-radius: 10px;"> {{else}} <i class="fa fa-user" style="width: 20px; height: 20px; color: blue; font-size: 20px; border-radius: 10px;"></i> {{end}}</a>
+          <a class="dropdown-item" href="#">Profil</a>
+          <a class="dropdown-item" href="#">Mes applications</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{url "Application.Logout"}}">Deconnexion</a>
+
         {{else}}
-        <a href="{{url "Application.Register"}}" class="btn btn-light">Inscription</a>
+        <a href="{{url "User.Register"}}" class="btn btn-light">Inscription</a>
         <a href="{{url "Application.Login"}}" class="btn btn-light">Connexion</a>
         {{end}}
+      </div>
+      <div class="site-nav-vertical dropdown">
+        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <form class="dropdown-item form-inline">
+              <input class="form-control" type="text" placeholder="Chercher une application">
+           </form>
+          <a class="dropdown-item" href="{{url "Application.Index"}}" >Accueil</a>
+          <a class="dropdown-item" href="#">Categorie</a>
+          <a class="dropdown-item" href="#">A propos</a>
+          {{if .user}}
+             <a class="dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+                <a class="dropdown-item" href="{{url "User.ViewUser" .user.IdUtilisateur}}" >{{if .user.ImageUtilisateur}} <img src="{{.user.ImageUtilisateur}}" height="20" width="20" style="border-radius: 10px;"> {{else}} <i class="fa fa-user" style="width: 20px; height: 20px; color: blue; font-size: 20px; border-radius: 10px;"></i> {{end}}</a>
+                <a class="dropdown-item" href="#">Profil</a>
+                <a class="dropdown-item" href="{{url "App.GetApplicationList"}}">Mes applications</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{url "Application.Logout"}}">Deconnexion</a>
+          {{else}}
+          <a href="{{url "User.Register"}}" class="dropdown-item btn btn-light">Inscription</a>
+          <a href="{{url "Application.Login"}}" class="dropdown-item btn btn-light">Connexion</a>
+          {{end}}
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="row">
-    <div class="span6">
-        {{template "flash.html" .}}
-    </div>
-    </div>
 </div>
 
   <div class="contents">

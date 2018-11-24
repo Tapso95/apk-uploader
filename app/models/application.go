@@ -1,13 +1,15 @@
 package models
-import (
-	// "github.com/revel/revel"
-)
-
 
 type Application struct {
-	IdApplication         int
-	NomApplication, Address    string
-	City, State, Zip string
-	Country          string
-	Price            int
+	IdApplication         		int
+	UtilisateurId				int
+	AdminId						int
+	TypeApplicationId			int
+	NomApplication   			string
+	CodeApplication 			string
+	EmplacementApplication      string
+	DateCreationApplication     string
+	DescriptionApplication		string
+	VersionApplication			int
+	StatutApplication			int
 }

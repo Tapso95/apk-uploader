@@ -9,10 +9,12 @@ import (
 
 type Utilisateur struct {
 	IdUtilisateur   		int
+	ProfilId				int
 	NomUtilisateur			string
 	PrenomUtilisateur 		string
 	EmailUtilisateur       	string
 	PasswordUtilisateur    	[]byte
+	ImageUtilisateur		string
 	StatutUtilisateur 		int
 }
 

@@ -6,6 +6,18 @@ package routes
 import "github.com/revel/revel"
 
 
+type tApp struct {}
+var App tApp
+
+
+func (_ tApp) GetApplicationListById(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.GetApplicationListById", args).URL
+}
+
+
 type tApplication struct {}
 var Application tApplication
 
@@ -26,13 +38,6 @@ func (_ tApplication) Hello(
 	return revel.MainRouter.Reverse("Application.Hello", args).URL
 }
 
-func (_ tApplication) Register(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("Application.Register", args).URL
-}
-
 func (_ tApplication) Login(
 		) string {
 	args := make(map[string]string)
@@ -47,17 +52,6 @@ func (_ tApplication) Logout(
 	return revel.MainRouter.Reverse("Application.Logout", args).URL
 }
 
-func (_ tApplication) SaveUser(
-		utilisateur interface{},
-		password interface{},
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "utilisateur", utilisateur)
-	revel.Unbind(args, "password", password)
-	return revel.MainRouter.Reverse("Application.SaveUser", args).URL
-}
-
 func (_ tApplication) PostLogin(
 		email string,
 		password string,
@@ -69,6 +63,52 @@ func (_ tApplication) PostLogin(
 	revel.Unbind(args, "password", password)
 	revel.Unbind(args, "remember", remember)
 	return revel.MainRouter.Reverse("Application.PostLogin", args).URL
+}
+
+
+type tUser struct {}
+var User tUser
+
+
+func (_ tUser) NewApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("User.NewApp", args).URL
+}
+
+func (_ tUser) ViewUser(
+		id int,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "id", id)
+	return revel.MainRouter.Reverse("User.ViewUser", args).URL
+}
+
+func (_ tUser) Register(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("User.Register", args).URL
+}
+
+func (_ tUser) SaveUser(
+		utilisateur interface{},
+		password interface{},
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "utilisateur", utilisateur)
+	revel.Unbind(args, "password", password)
+	return revel.MainRouter.Reverse("User.SaveUser", args).URL
+}
+
+func (_ tUser) Setting(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("User.Setting", args).URL
 }
 
 

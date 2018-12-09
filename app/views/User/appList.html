@@ -4,28 +4,33 @@
       </div>
       <div class="card-body">
       <div class="form-group">
-        <a class="btn btn-primary" href="#">Nouvelle application</a>
+        <a class="btn btn-primary" href="{{url "User.NewApp"}}">Nouvelle application</a>
       </div>
+      <div>{{if .user}}<strong class="essais">Cool</strong>{{else}}<strong >Pas cool</strong> {{end}}</div>
         <table class="table table-striped table-bordered">
           <thead>
             <tr>
+              <td hidden=""></td>
               <td>Nom</td>
               <td>Type</td>
               <td>Catégorie</td>
               <td>Date</td>
+              <td>Statut</td>
               <td>Action</td>
             </tr>
           </thead>
           <tbody>
+          {{if .applications }}
+            {{range .applications}}
             <tr>
-              <td>Nom</td>
-              <td>Type</td>
-              <td>Catégorie</td>
-              <td>Date</td>
+              <td hidden="">{{.IdApplication}}</td>
+              <td>{{.NomApplication}}</td>
+              <td>{{.TypeApplicationId}}</td>
+              <td></td>
+              <td>{{.DateCreationApplication}}</td>
+              <td>{{.StatutApplication}}</td>
               <td class="col-md-3"><div class="float-right">
-                <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-                  Voir
-                </a>
+                <a class="btn btn-primary btn-sm show-appdetails"  href="javascript:void(0);"  data-id="{{.IdApplication}}">Voir</a>
                 <div class="btn btn-warning btn-sm">
                   modifier
                 </div>
@@ -34,25 +39,37 @@
                 </div>
               </div></td>
             </tr>
-            <!-- <tr>
-              <td>Nom</td>
-              <td>Type</td>
-              <td>Catégorie</td>
-              <td>Date</td>
-              <td><div class="row">
-                <div class="col">
-                  Voir
-                </div>
-                <div class="col">
-                  modifier
-                </div>
-                <div class="col">
-                  Supprimer
-                </div>
-              </div></td>
-            </tr> -->
+            {{end}}
+          {{else}}
+            <tr>
+              <td colspan="6">
+                <div class="text-center">Aucune application trouvée</div>
+              </td>
+            </tr>
+          {{end}}
           </tbody>
         </table>
       </div>
     </div>
   </div>
+
+  <!--Modal d'affichage des détails de l'application -->
+<div class="modal fade active" id="popup-appdetailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailModalLabel">Détails de l'application {{.idApp}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-appdetailbody">
+        <p>Text will be dislay here !</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>

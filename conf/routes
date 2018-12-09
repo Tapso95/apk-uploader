@@ -15,7 +15,10 @@ GET     /register								User.Register
 POST 	/register 								User.SaveUser
 GET		/user/:id 								User.ViewUser
 #POST 	/user/:id 								User.SaveSettings
-GET		/application 							Application.ApplicationList
+GET		/application 							User.ListApp
+GET 	/application/create 					User.NewApp
+#POST 	/application/create 					User.SaveApp
+GET 	/application/view/:id 					User.ViewApp
 GET     /Application/Hello     							Application.Hello
 
 # Ignore favicon requests

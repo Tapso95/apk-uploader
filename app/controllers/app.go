@@ -37,7 +37,7 @@ func (c Application) connected() *models.Utilisateur {
 		return c.ViewArgs["utilisateur"].(*models.Utilisateur)
 	}
 	if email, ok := c.Session["utilisateur"]; ok {
-		fmt.Println("user0 %s",email)
+		// fmt.Println("user0 %s",email)
 		return c.getUser(email)
 	}
 	return nil
@@ -54,17 +54,13 @@ func (c Application) Logout() revel.Result {
 }
 
 func (c Application) getUser(email string) (utilisateur *models.Utilisateur){
-	 utilisateur = &models.Utilisateur{}
-	// fmt.Println("get user",email)
+	utilisateur = &models.Utilisateur{}
 	user:=DB.Where("email_utilisateur=?",email).Find(utilisateur)
-	// fmt.Println(user)
-	// err:= DB.Select(utilisateur,`SELECT * FROM utilisateurs WHERE email_utilisateur=?`,email)
 	if user == nil {
 		fmt.Printf("user not found")
 		c.Log.Error("Failed to find user")
 		panic(user)
 	}
-	fmt.Printf("user %s",utilisateur)
 	return 
 }
 
@@ -103,6 +99,25 @@ func (c Application) PostLogin(email, password string, remember bool) revel.Resu
 	return c.Redirect(routes.Application.Login())
 }
 
+func (c Application) getTypeApp() (typeApplication *models.TypeApplication) {
+	typeApplication = &models.TypeApplication{}
+	typeApp:=DB.Find(typeApplication)
+	if typeApp == nil {
+		panic(typeApp)
+	}
+	fmt.Println("--",typeApp)
+	return 
+}
+
+func (c Application) getCategorieApp() (categorie *models.Categorie) {
+	categorie = &models.Categorie{}
+	cat:=DB.Find(categorie)
+	if cat == nil {
+		panic(cat)
+	}
+	fmt.Println("-+",cat)
+	return 
+}
 
 // func (c Application) Hello(username string, password string) revel.Result{
 // 	c.Validation.Required(username).Message("Le mail est obligatoire!")

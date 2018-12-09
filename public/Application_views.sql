@@ -38,4 +38,9 @@ ALTER TABLE detail_telechargement(
 
 );
 
-select nom_application,
+select nom_application, nom_utilisateur, email_utilisateur, 
+
+--Afficher les details de l'utilisateur :
+--Nom, prenom, 
+
+SELECT * FROM categories, type_applications WHERE categories.id_categorie=type_applications.categorie_id;

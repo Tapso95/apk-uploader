@@ -101,11 +101,40 @@ func Register() {
 	revel.RegisterController((*controllers.User)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
+				Name: "ListApp",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					34: []string{ 
+						"user",
+						"id",
+						"applications",
+					},
+					36: []string{ 
+						"user",
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "ViewApp",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					51: []string{ 
+						"app",
+						"idApp",
+					},
+				},
+			},
+			&revel.MethodType{
 				Name: "NewApp",
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					25: []string{ 
+					64: []string{ 
+						"user",
+						"categories",
+						"typeApplication",
 					},
 				},
 			},
@@ -115,8 +144,7 @@ func Register() {
 					&revel.MethodArg{Name: "id", Type: reflect.TypeOf((*int)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
-					41: []string{ 
-						"user",
+					84: []string{ 
 					},
 				},
 			},
@@ -125,7 +153,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					45: []string{ 
+					88: []string{ 
 					},
 				},
 			},
@@ -143,7 +171,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					112: []string{ 
+					140: []string{ 
 					},
 				},
 			},
@@ -239,14 +267,14 @@ func Register() {
 			24: "username",
 		},
 		"apk-uploader/app/controllers.Application.PostLogin": { 
-			77: "email",
-			78: "password",
+			73: "email",
+			74: "password",
 		},
 		"apk-uploader/app/controllers.User.SaveUser": { 
-			65: "utilisateur.NomUtilisateur",
-			66: "utilisateur.PasswordUtilisateur",
-			67: "utilisateur.EmailUtilisateur",
-			75: "utilisateur.EmailUtilisateur",
+			93: "utilisateur.NomUtilisateur",
+			94: "utilisateur.PasswordUtilisateur",
+			95: "utilisateur.EmailUtilisateur",
+			103: "utilisateur.EmailUtilisateur",
 		},
 	}
 	testing.TestSuites = []interface{}{ 

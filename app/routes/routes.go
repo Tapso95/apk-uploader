@@ -70,6 +70,20 @@ type tUser struct {}
 var User tUser
 
 
+func (_ tUser) ListApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("User.ListApp", args).URL
+}
+
+func (_ tUser) ViewApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("User.ViewApp", args).URL
+}
+
 func (_ tUser) NewApp(
 		) string {
 	args := make(map[string]string)

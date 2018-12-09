@@ -8,6 +8,7 @@ type Application struct {
 	NomApplication   			string
 	CodeApplication 			string
 	EmplacementApplication      string
+	ImageApplication 			string
 	DateCreationApplication     string
 	DescriptionApplication		string
 	VersionApplication			int

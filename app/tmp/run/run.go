@@ -120,7 +120,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					51: []string{ 
+					50: []string{ 
 						"app",
 						"idApp",
 					},
@@ -131,7 +131,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					64: []string{ 
+					63: []string{ 
 						"user",
 						"categories",
 						"typeApplication",
@@ -144,7 +144,7 @@ func Register() {
 					&revel.MethodArg{Name: "id", Type: reflect.TypeOf((*int)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
-					84: []string{ 
+					83: []string{ 
 					},
 				},
 			},
@@ -153,7 +153,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					88: []string{ 
+					87: []string{ 
 					},
 				},
 			},
@@ -171,7 +171,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					140: []string{ 
+					139: []string{ 
 					},
 				},
 			},
@@ -271,10 +271,10 @@ func Register() {
 			74: "password",
 		},
 		"apk-uploader/app/controllers.User.SaveUser": { 
-			93: "utilisateur.NomUtilisateur",
-			94: "utilisateur.PasswordUtilisateur",
-			95: "utilisateur.EmailUtilisateur",
-			103: "utilisateur.EmailUtilisateur",
+			92: "utilisateur.NomUtilisateur",
+			93: "utilisateur.PasswordUtilisateur",
+			94: "utilisateur.EmailUtilisateur",
+			102: "utilisateur.EmailUtilisateur",
 		},
 	}
 	testing.TestSuites = []interface{}{ 

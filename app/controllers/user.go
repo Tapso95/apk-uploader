@@ -46,7 +46,6 @@ func (u User) ViewApp() revel.Result {
 		err := DB.Where("id_application=?",idApp).Find(&app)
 		fmt.Println("inconnu")
 		if err!= nil {
-			fmt.Println("trouvée")
 			fmt.Println("id:",idApp)
 			return u.Render(app,idApp)
 		}

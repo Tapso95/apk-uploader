@@ -77,6 +77,7 @@ func (c Application) PostLogin(email, password string, remember bool) revel.Resu
         c.FlashParams()
     }
 	utilisateur := c.getUser(email)
+	fmt.Println("users:",utilisateur)
 	if utilisateur != nil {
 		err := bcrypt.CompareHashAndPassword(utilisateur.PasswordUtilisateur,[]byte(password))
 		if err == nil {
@@ -99,25 +100,38 @@ func (c Application) PostLogin(email, password string, remember bool) revel.Resu
 	return c.Redirect(routes.Application.Login())
 }
 
-func (c Application) getTypeApp() (typeApplication *models.TypeApplication) {
-	typeApplication = &models.TypeApplication{}
-	typeApp:=DB.Find(typeApplication)
-	if typeApp == nil {
-		panic(typeApp)
-	}
-	fmt.Println("--",typeApp)
-	return 
-}
-
-func (c Application) getCategorieApp() (categorie *models.Categorie) {
-	categorie = &models.Categorie{}
-	cat:=DB.Find(categorie)
+func (c Application) getCategorieApp() revel.Result{
+	var categories []*models.Categorie
+	cat:=DB.Find(&categories)
 	if cat == nil {
 		panic(cat)
 	}
-	fmt.Println("-+",cat)
-	return 
+	// for _, categorie := range categories {
+		
+	// fmt.Println("-+",cat)
+	// 	}
+	return c.Render(categories)
 }
+
+func (c Application) LoadTypeApp() revel.Result{
+	idCat := c.Params.Route.Get("id")
+	fmt.Println("id:",idCat)
+	var typeApps []*models.TypeApplication
+	if user := c.connected(); user != nil {
+		err := DB.Where("categorie_id=?",idCat).Find(&typeApps)
+		if err!= nil {
+			// erreur := true;
+			fmt.Println("-+",typeApps)
+			// return c.RenderJSON(erreur, typeApps,idCat)
+			return c.RenderJSON(typeApps)
+		}
+		erreur := false
+		c.Log.Fatal("Erreur lors du chargement des types d'application de l'application", "error", err)
+		return c.RenderJSON(erreur)
+	}
+	return c.Redirect(routes.Application.Login())
+}
+
 
 // func (c Application) Hello(username string, password string) revel.Result{
 // 	c.Validation.Required(username).Message("Le mail est obligatoire!")
@@ -129,3 +143,6 @@ func (c Application) getCategorieApp() (categorie *models.Categorie) {
 //     }
 // 	return c.Render(username)
 // }
+func sa() {
+	
+}

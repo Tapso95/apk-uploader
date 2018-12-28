@@ -2,7 +2,7 @@ package models
 
 
 type Evaluation struct {
-	IdEvaluation 		int
+	IdEvaluation 		int `gorm:"primary_key";"AUTO_INCREMENT"`
 	UtilisateurId		int
 	ApplicationId		int
 	evaluation 			int

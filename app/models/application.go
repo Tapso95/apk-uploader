@@ -1,7 +1,9 @@
 package models
 
+import "time"
+
 type Application struct {
-	IdApplication         		int
+	IdApplication         		int `gorm:"primary_key";"AUTO_INCREMENT"`
 	UtilisateurId				int
 	AdminId						int
 	TypeApplicationId			int
@@ -9,8 +11,9 @@ type Application struct {
 	CodeApplication 			string
 	EmplacementApplication      string
 	ImageApplication 			string
-	DateCreationApplication     string
+	DateCreationApplication     time.Time
 	DescriptionApplication		string
+	TailleApplication 			int
 	VersionApplication			int
 	StatutApplication			int
 }

@@ -65,6 +65,13 @@ func (_ tApplication) PostLogin(
 	return revel.MainRouter.Reverse("Application.PostLogin", args).URL
 }
 
+func (_ tApplication) LoadTypeApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Application.LoadTypeApp", args).URL
+}
+
 
 type tUser struct {}
 var User tUser
@@ -89,6 +96,15 @@ func (_ tUser) NewApp(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("User.NewApp", args).URL
+}
+
+func (_ tUser) SaveApp(
+		application interface{},
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "application", application)
+	return revel.MainRouter.Reverse("User.SaveApp", args).URL
 }
 
 func (_ tUser) ViewUser(

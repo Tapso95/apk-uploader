@@ -8,7 +8,7 @@ import (
 
 
 type Utilisateur struct {
-	IdUtilisateur   		uint `gorm:"primary_key" json:"id"`
+	IdUtilisateur   		int `gorm:"primary_key" json:"id"`
 	ProfilId				int
 	NomUtilisateur			string
 	PrenomUtilisateur 		string

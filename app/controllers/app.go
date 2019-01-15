@@ -100,17 +100,17 @@ func (c Application) PostLogin(email, password string, remember bool) revel.Resu
 	return c.Redirect(routes.Application.Login())
 }
 
-func (c Application) getCategorieApp() revel.Result{
+func (c Application) getCategorieApp() int{
 	var categories []*models.Categorie
-	cat:=DB.Find(&categories)
+	cat:=DB.Find(&categories).Joins("JOIN type_applications ON type_applications.categorie_id=categories.id_categorie")
 	if cat == nil {
 		panic(cat)
 	}
-	// for _, categorie := range categories {
-		
-	// fmt.Println("-+",cat)
-	// 	}
-	return c.Render(categories)
+	for _, categorie := range categories {
+		fmt.Println("-+",cat)
+		fmt.Println("-+",categorie)
+		}
+	return 0
 }
 
 func (c Application) LoadTypeApp() revel.Result{
@@ -143,6 +143,3 @@ func (c Application) LoadTypeApp() revel.Result{
 //     }
 // 	return c.Render(username)
 // }
-func sa() {
-	
-}

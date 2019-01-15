@@ -35,11 +35,57 @@ func Register() {
 	revel.RegisterController((*controllers.App)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
+				Name: "ListApp",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					42: []string{ 
+						"user",
+						"id",
+						"applications",
+					},
+					44: []string{ 
+						"user",
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "ViewApp",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					79: []string{ 
+						"app",
+						"idApp",
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "NewApp",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+					99: []string{ 
+						"user",
+						"id",
+						"categories",
+					},
+				},
+			},
+			&revel.MethodType{
+				Name: "SaveApp",
+				Args: []*revel.MethodArg{ 
+					&revel.MethodArg{Name: "application", Type: reflect.TypeOf((**models.Application)(nil)) },
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
 				Name: "GetApplicationListById",
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					58: []string{ 
+					250: []string{ 
 					},
 				},
 			},
@@ -108,58 +154,12 @@ func Register() {
 	revel.RegisterController((*controllers.User)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
-				Name: "ListApp",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-					51: []string{ 
-						"user",
-						"id",
-						"applications",
-					},
-					53: []string{ 
-						"user",
-					},
-				},
-			},
-			&revel.MethodType{
-				Name: "ViewApp",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-					89: []string{ 
-						"app",
-						"idApp",
-					},
-				},
-			},
-			&revel.MethodType{
-				Name: "NewApp",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-					109: []string{ 
-						"user",
-						"id",
-						"categories",
-					},
-				},
-			},
-			&revel.MethodType{
-				Name: "SaveApp",
-				Args: []*revel.MethodArg{ 
-					&revel.MethodArg{Name: "application", Type: reflect.TypeOf((**models.Application)(nil)) },
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
 				Name: "ViewUser",
 				Args: []*revel.MethodArg{ 
 					&revel.MethodArg{Name: "id", Type: reflect.TypeOf((*int)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
-					215: []string{ 
+					36: []string{ 
 					},
 				},
 			},
@@ -168,7 +168,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					219: []string{ 
+					40: []string{ 
 					},
 				},
 			},
@@ -186,7 +186,7 @@ func Register() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					271: []string{ 
+					92: []string{ 
 					},
 				},
 			},
@@ -286,10 +286,10 @@ func Register() {
 			74: "password",
 		},
 		"apk-uploader/app/controllers.User.SaveUser": { 
-			224: "utilisateur.NomUtilisateur",
-			225: "utilisateur.PasswordUtilisateur",
-			226: "utilisateur.EmailUtilisateur",
-			234: "utilisateur.EmailUtilisateur",
+			45: "utilisateur.NomUtilisateur",
+			46: "utilisateur.PasswordUtilisateur",
+			47: "utilisateur.EmailUtilisateur",
+			55: "utilisateur.EmailUtilisateur",
 		},
 	}
 	testing.TestSuites = []interface{}{ 

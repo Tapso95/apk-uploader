@@ -10,6 +10,36 @@ type tApp struct {}
 var App tApp
 
 
+func (_ tApp) ListApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.ListApp", args).URL
+}
+
+func (_ tApp) ViewApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.ViewApp", args).URL
+}
+
+func (_ tApp) NewApp(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.NewApp", args).URL
+}
+
+func (_ tApp) SaveApp(
+		application interface{},
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "application", application)
+	return revel.MainRouter.Reverse("App.SaveApp", args).URL
+}
+
 func (_ tApp) GetApplicationListById(
 		) string {
 	args := make(map[string]string)
@@ -76,36 +106,6 @@ func (_ tApplication) LoadTypeApp(
 type tUser struct {}
 var User tUser
 
-
-func (_ tUser) ListApp(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("User.ListApp", args).URL
-}
-
-func (_ tUser) ViewApp(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("User.ViewApp", args).URL
-}
-
-func (_ tUser) NewApp(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("User.NewApp", args).URL
-}
-
-func (_ tUser) SaveApp(
-		application interface{},
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "application", application)
-	return revel.MainRouter.Reverse("User.SaveApp", args).URL
-}
 
 func (_ tUser) ViewUser(
 		id int,

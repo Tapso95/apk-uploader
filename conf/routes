@@ -15,10 +15,10 @@ GET     /register								User.Register
 POST 	/register 								User.SaveUser
 GET		/user/:id 								User.ViewUser
 # POST 	/user/:id 								User.SaveSettings
-GET		/application 							User.ListApp
-GET 	/application/create 					User.NewApp
-GET 	/application/view/:id 					User.ViewApp
-POST 	/save-app 								User.SaveApp
+GET		/application 							App.ListApp
+GET 	/application/create 					App.NewApp
+GET 	/application/view/:id 					App.ViewApp
+POST 	/save-app 								App.SaveApp
 GET 	/application/load-type-app/:id 			Application.LoadTypeApp
 GET     /Application/Hello     							Application.Hello
 
